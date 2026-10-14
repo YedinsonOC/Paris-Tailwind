@@ -18,10 +18,11 @@
 
 </head>
 
-<body class="flex flex-col items-center justify-center gap-7">
+<body class="bg-slate-50 flex flex-col items-center justify-center gap-7">
 
-    <header class="w-full bg-white shadow-sm md:sticky top-0 z-50  md:z-50">
-        <div class="w-full bg-[#190510] text-white text-[10px] py-2 md:py-1 px-4 md:px-6 flex flex-row sm:flex-row justify-between 
+    <!-- segundo header -->
+        <header class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-30 border-b border-rose-100/60 shadow-sm">
+            <div class="w-full bg-[#190510] text-white text-[10px] py-2 md:py-1 px-4 md:px-6 flex flex-row sm:flex-row justify-between 
             items-center gap-2 sm:gap-0">
             <p class="font-light text-center sm:text-left">Distribuidora de Belleza París </p>
             <div class="bg-[#fff]/10 rounded-full py-1 px-1 flex items-center gap-2 ">
@@ -32,111 +33,140 @@
             </div>
         </div>
 
-        <!-- Barra de navegación -->
-        <div class="relative max-w-full m-auto bg-pink-800 px-4 md:px-6 py-3 md:py-1 border-b border-pink-500 flex 
-        flex-wrap md:flex-nowrap items-center justify-between gap-4 md:gap-6">
 
-            <div class="relative flex items-center gap-1 w-auto md:w-auto justify-start order-1 md:order-none">
 
-                <!-- Boton hamburguesa -->
-                <button id="menu-btn"
-                    class="absolute left-0 md:hidden text-white text-2xl focus:outline-none px-2 transition-transform">
-                    <i class="fa-solid fa-bars"></i>
+        <div class=" mx-auto md:w-full px-4 sm:px-6 py-3.5 flex justify-between items-center gap-4">
+            
+                <button id="menuBtn" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-rose-100 text-slate-700 hover:text-rose-600 flex items-center justify-center transition focus:outline-none" aria-label="Menú">
+                    <i class="fa-solid fa-bars text-lg"></i>
                 </button>
-
-                <img src="./img/logo.png" alt="Distribuidora París" class="h-10 w-auto md:h-12 translate-x-2/3">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                
+                <img src="./img/newlg.png" alt="Logo" class="h-10 w-auto">
+                
             </div>
 
-            <!-- Contenedor menu -->
-            <div id="menu-nav" class="hidden absolute top-full left-0 z-100 w-full bg-pink-800 shadow-lg pb-4 md:static md:w-auto 
-            md:bg-transparent md:shadow-none md:pb-0 md:flex flex-col md:flex-row items-center translate-x-0 xl:translate-x-[170px] 
-            py-2 md:py-4 gap-2 flex-1 max-w-full xl:max-w-lg justify-center md:justify-start">
-                <nav class="flex items-around w-full md:w-max">
-                    <ul
-                        class="flex flex-col md:flex-row flex items-center w-full gap-4 md:gap-6 text-sm font-medium text-white">
-                        <li class="w-full md:w-auto text-center"><a href="#"
-                                class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Inicio</a></li>
-                        <li class="w-full md:w-auto text-center"><a href="#"
-                                class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Productos</a></li>
-                        <li class="w-full md:w-auto text-center"><a href="#"
-                                class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Destacados</a></li>
-                        <li class="w-full md:w-auto text-center"><a href="#"
-                                class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <!--  Navigacion -->
+            <nav class="hidden md:flex items-center space-x-8 text-base font-semibold text-slate-600">
+                <a href="#inicio" class="text-rose-600 hover:text-rose-600 transition">Inicio</a>
+                <a href="#categorias" class="hover:text-rose-600 transition">Categorías</a>
+                <a href="./productos/index.html" class="hover:text-rose-600 transition">Catálogo</a>
+                <a href="#ofertas" class="hover:text-rose-600 transition">Ofertas</a>
+                <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
+            </nav>
 
-            <div
-                class="flex justify-center md:justify-end w-full md:w-auto max-w-full md:max-w-lg relative px-0 translate-x-0 xl:translate-x-[12px] order-3 md:order-none">
-                <input type="text" placeholder="Buscar productos" class="w-full pl-5 pr-9 py-2 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none 
-                        focus:border-rose-500 focus:bg-white transition">
-                <button
-                    class="absolute inset-y-0 right-0 pr-3.5 px-4 md:px-3 flex items-center text-black hover:text-rose-600">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
 
+            
+            
             <!-- Carrito y Perfil -->
-            <div
-                class="flex items-center justify-center w-auto md:w-auto gap-4 md:gap-5 text-gray-600 order-2 md:order-none">
-
-                <a href="#"
-                    class="bg-gray-100 relative p-1 rounded-full translate-x-0 md:translate-x-[-40px] hover:text-rose-600">
-                    <i class="fa-solid fa-cart-shopping text-lg text-black"></i>
-
+            <div class="flex items-center justify-center w-auto md:w-auto gap-4 md:gap-5 text-gray-600 order-2 md:order-none">
+                <!-- Barra búsqueda -->
+                <div class="relative hidden lg:block w-60 translate-x-0 xl:translate-x-[12px]">
+                    <input type="text" placeholder="Buscar maquillaje, skincare..." class="w-full bg-slate-100 text-xs rounded-full 
+                                pl-9 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+                </div>
+            
+                <a href="#" class="bg-blue-200/30 relative py-2 px-1.5 rounded-full translate-x-0  hover:text-white hover:bg-rose-600 
+                                transition text-sm flex items-center justify-center">
+                    <i class="fa-solid fa-cart-shopping text-lg text-black hover:text-white"></i>
+            
                     <div class="bg-gray-100 absolute -top-1.5 -right-1.5 
-                        font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                                    font-bold rounded-full h-4 w-4 flex items-center justify-center">
                         <span class="absolute  bg-rose-500 text-white text-[10px] 
-                        font-bold rounded-full h-3 w-3 flex items-center  justify-center">0</span>
+                                    font-bold rounded-full h-3 w-3 flex items-center  justify-center">0</span>
                     </div>
-
+            
                 </a>
-
-                <a href="#" class="bg-gray-100 py-2 px-1.5 rounded-full flex items-center gap-1 
-                    hover:bg-rose-500 text-sm translate-x-0 md:translate-x-[-45px] text-black transition">
+            
+                <a href="#" class="bg-blue-200/30 py-2 px-1.5 rounded-full flex items-center gap-1 
+                                hover:bg-rose-500 text-sm translate-x-0 text-black transition">
                     <i class="fa-regular fa-user text-lg text-black hover:text-white transition"></i>
                 </a>
+            
             </div>
-        </div>
-
-        <!-- Barra de Categorías -->
-        <nav class="border-t border-gray-100 bg-white">
-            <div
-                class="max-w-7xl mx-auto px-4 md:px-6 flex items-center gap-4 md:gap-8 text-xs font-medium text-gray-700 py-2.5 overflow-x-auto snap-x">
-
-                <a href="#" class="flex items-center gap-1.5 text-rose-600 font-semibold whitespace-nowrap hover:rounded-full 
-                    hover:bg-rose-800 hover:text-white px-2 py-1 snap-start">
-                    <i class="fa-solid fa-table-cells-large"></i> Catálogo Completo</a>
-
-                <a href="#" class="whitespace-nowrap hover:rounded-full hover:bg-rose-800 hover:text-white 
-                    px-2 py-1 snap-start">
-                    <i class="fa-solid fa-pump-soap"></i>Cuidado Capilar</a>
-
-                <a href="#"
-                    class="hover:text-white whitespace-nowrap hover:rounded-full hover:bg-rose-800 px-2 py-1 snap-start">
-                    <i class="fa-solid fa-hands-bubbles"></i> Tratamiento Facial</a>
-
-                <a href="#"
-                    class="hover:text-white whitespace-nowrap hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
-                    <i class="fa-solid fa-paintbrush"></i> Maquillaje Profesional</a>
-
-                <a href="#"
-                    class="hover:text-white whitespace-nowrap hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
-                    <i class="fa-solid fa-hand-sparkles"></i> Manicura & Uñas</a>
-
-                <a href="#"
-                    class="hover:text-white whitespace-nowrap font-semibold hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
-                    <i class="fa-solid fa-tags"></i> Ofertas Especiales</a>
+            
+            
             </div>
-        </nav>
-    </header>
+
+            <div id="mobileMenu" class="hidden md:hidden bg-white border-t z-50 border-rose-100 px-4 pt-3 pb-5 space-y-3 shadow-xl">
+                <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                    <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">Menú de Navegación</span>
+
+                    <!-- X para cerrar el menú -->
+                    <button id="closeMenuBtn"
+                        class="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-500 hover:text-rose-600 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark text-base"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
+                    <a href="#inicio"
+                        class="mobile-link px-3 py-2 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition flex items-center gap-3">
+                        Inicio
+                    </a>
+                    <a href="#categorias"
+                        class="mobile-link px-3 py-2 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition flex items-center gap-3">
+                        Categorías
+                    </a>
+                    <a href="#productos"
+                        class="mobile-link px-3 py-2 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition flex items-center gap-3">
+                        Catálogo
+                    </a>
+                    <a href="#ofertas"
+                        class="mobile-link px-3 py-2 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition flex items-center gap-3">
+                        Promociones
+                    </a>
+                    <a href="#contacto"
+                        class="mobile-link px-3 py-2 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition flex items-center gap-3">
+                        Contacto
+                    </a>
+                </nav>
+            </div>
+            <!-- Barra búsqueda -->
+            <div class="relative md:hidden w-auto mx-auto mr-4 ml-4 mb-2 translate-x-0">
+                <input type="text" placeholder="Buscar maquillaje, skincare..." class="w-full bg-slate-100 text-xs rounded-full 
+                                pl-9 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+            </div>
+            <!-- Barra de Categorías -->
+            <nav class="bg-white/90 backdrop-blur-md border-t border-gray-100">
+                <div
+                    class="max-w-7xl mx-auto px-4 md:px-6 flex items-center gap-4 md:gap-8 text-xs font-medium text-gray-700 py-2.5 overflow-x-auto snap-x">
+            
+                    <a href="#" class="flex items-center gap-1.5 text-rose-600 font-semibold whitespace-nowrap hover:rounded-full 
+                                hover:bg-rose-800 hover:text-white px-2 py-1 snap-start">
+                        <i class="fa-solid fa-table-cells-large"></i> Catálogo Completo</a>
+            
+                    <a href="#" class="whitespace-nowrap hover:rounded-full hover:bg-rose-800 hover:text-white 
+                                px-2 py-1 snap-start">
+                        <i class="fa-solid fa-pump-soap"></i>Cuidado Capilar</a>
+            
+                    <a href="#"
+                        class="hover:text-white whitespace-nowrap hover:rounded-full hover:bg-rose-800 px-2 py-1 snap-start">
+                        <i class="fa-solid fa-hands-bubbles"></i> Tratamiento Facial</a>
+            
+                    <a href="#"
+                        class="hover:text-white whitespace-nowrap hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
+                        <i class="fa-solid fa-paintbrush"></i> Maquillaje Profesional</a>
+            
+                    <a href="#"
+                        class="hover:text-white whitespace-nowrap hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
+                        <i class="fa-solid fa-hand-sparkles"></i> Manicura & Uñas</a>
+            
+                    <a href="#"
+                        class="hover:text-white whitespace-nowrap font-semibold hover:rounded-full px-2 py-1 hover:bg-rose-800 snap-start">
+                        <i class="fa-solid fa-tags"></i> Ofertas Especiales</a>
+                </div>
+            </nav>
+            </header>
 
     <section class="flex flex-col w-full px-2 md:px-2 gap-8 mt-2">
 
         <!-- Contenido Principal -->
-        <div class=" w-full px-2 md:px-6 py-1 flex flex-col md:flex-row gap-8">
+        <div class=" w-full px-2 md:px-6  flex flex-col md:flex-row gap-8">
             <div
-                class="relative w-full h-[400px] md:h-[350px] flex items-center overflow-hidden bg-rose-100 rounded-3xl shadow-xl border">
+                class="relative w-full h-[400px] md:h-[350px] flex items-center overflow-hidden rounded-3xl shadow-xl border">
                 <video autoplay muted loop playsinline
                     class="absolute min-w-full w-full px-0 md:px-4 h-full min-h-full object-cover">
                     <source src="./video/DBP.mp4" type="video/mp4">
@@ -145,7 +175,7 @@
                 <div
                     class="absolute w-full h-full p-4 bg-gradient-to-r from-[#190510]/60 md:from-[#190510]/30 to-transparent flex items-center">
                     <div
-                        class="w-[90%] sm:w-2/3 md:w-1/2 lg:w-2/6 bg-white/10 border border-white/30 gap-2 p-4 md:p-2 rounded-lg flex flex-col">
+                        class="w-[90%] sm:w-2/3 md:w-1/2 bg-white/10 tranalate-x-0 xl:translate-x-[12px] border border-white/30 gap-2 p-4 md:p-2 rounded-lg flex flex-col">
                         <div
                             class="w-full md:w-60 text-xs font-bold bg-rose-200/50 rounded-full border border-rose-300/50 flex items-center justify-center p-1 md:p-0">
                             <span class="text-xs md:text-sm font-bold text-rose-500 text-center">
@@ -154,8 +184,10 @@
 
                         <div
                             class=" bg- font-serif font-medium font-bold text-xl md:text-2xl flex flex-col items-start md:items-center justify-center text-white md:text-black">
-                            <h1 class="text-left md:text-center">Encuentra los Mejores Productos para tu Salón y Belleza
-                                Personal.</h1>
+                            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white/80 leading-none tracking-tight">
+                                Encuentra los Mejores Productos para tu <span
+                                    class="bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent">Salón y Belleza</span>
+                            </h1>
                         </div>
 
                         <div class="text-xs text-white md:text-black">
@@ -212,46 +244,42 @@
             <h2
                 class="col-span-full text-lg px-4 md:px-6 pt-6 pb-2 font-semibold text-gray-700 text-center md:text-left">
                 Explorar por Categorías</h2>
-            <a href="#" class="relative self-start overflow-hidden rounded-lg shadow-md md:bg-rose-500 group">
-                <img src="./img/maquillaje.jpg" alt="Maquillaje"
-                    class="w-full h-[220px] md:h-[180px] object-cover transition-transform duration-300 group-hover:scale-105">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-rose-500 via-black/30 to-transparent">
-                    <h2 class="text-xl font-bold">Maquillaje</h2>
-                    <p class="text-sm">Shampoos, Keratinas, Tintes & Ampollas</p>
+
+            <a class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group text-center cursor-pointer">
+                <div class="w-full h-20 mx-auto rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl group-hover:bg-rose-500 group-hover:text-white transition duration-300">
+                    <img src="./img/maquillaje.jpg" alt="#" class="w-full h-full object-cover rounded-2xl">
                 </div>
+                <h3 class="font-bold text-slate-800 text-base mt-4">Maquillaje</h3>
+                <p class="text-xs text-slate-400 mt-1">Bases, Labiales, Sombras</p>
             </a>
-            <a href="#" class="relative self-start overflow-hidden rounded-lg shadow-md md:bg-rose-500 group ">
-                <img src="./img/cuidadopiel.jpg" alt="Maquillaje"
-                    class="w-full h-[220px] md:h-[180px] object-cover transition-transform duration-300 group-hover:scale-105">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-black/75 via-black/30 to-transparent">
-                    <h2 class="text-xl font-bold">Cuidado de la Piel</h2>
-                    <p class="text-sm">Shampoos, Keratinas, Tintes & Ampollas</p>
+
+            <a class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group text-center cursor-pointer">
+                <div class="w-full h-20 mx-auto rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl group-hover:bg-rose-500 group-hover:text-white transition duration-300">
+                    <img src="./img/cuidadopiel.jpg" alt="#" class="w-full h-full object-cover rounded-2xl">
                 </div>
+                <h3 class="font-bold text-slate-800 text-base mt-4">Cuidado de la Piel</h3>
+                <p class="text-xs text-slate-400 mt-1">Shampoos, Keratinas, Tintes & Ampollas</p>
             </a>
-            <a href="#" class="relative self-start overflow-hidden rounded-lg shadow-md md:bg-rose-500 group">
-                <img src="./img/cuidadopiel.jpg" alt="Cuidado Capilar"
-                    class="w-full h-[220px] md:h-[180px] object-cover transition-transform duration-300 group-hover:scale-105">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-black/75 via-black/30 to-transparent">
-                    <h2 class="text-xl font-bold">Cuidado Capilar</h2>
-                    <p class="text-sm">Shampoos, Keratinas, Tintes & Ampollas</p>
+
+            <a class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group text-center cursor-pointer">
+                <div class="w-full h-20 mx-auto rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl group-hover:bg-rose-500 group-hover:text-white transition duration-300">
+                    <img src="./img/capilar.jpg" alt="#" class="w-full h-full object-cover rounded-2xl">
                 </div>
+                <h3 class="font-bold text-slate-800 text-base mt-4">Cuidado Capilar</h3>
+                <p class="text-xs text-slate-400 mt-1">Shampoos, Keratinas, Tintes & Ampollas</p>
             </a>
-            <a href="#" class="relative self-start overflow-hidden rounded-lg shadow-md group">
-                <img src="./img/cuidadopiel.jpg" alt="Maquillaje"
-                    class="w-full h-[220px] md:h-[180px] object-cover transition-transform duration-300 group-hover:scale-105">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-black/75 via-black/30 to-transparent">
-                    <h2 class="text-xl font-bold">Perfumería</h2>
-                    <p class="text-sm">Shampoos, Keratinas, Tintes & Ampollas</p>
+
+            <a class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group text-center cursor-pointer">
+                <div class="w-full h-20 mx-auto rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl group-hover:bg-rose-500 group-hover:text-white transition duration-300">
+                    <img src="./img/perfumes.jpg" alt="#" class="w-full h-full object-cover rounded-2xl">
                 </div>
+                <h3 class="font-bold text-slate-800 text-base mt-4">Perfumería</h3>
+                <p class="text-xs text-slate-400 mt-1">Shampoos, Keratinas, Tintes & Ampollas</p>
             </a>
         </div>
 
         <!-- Productos Mas Vendidos -->
-        <div class="products-cards w-full md:h-96 md:pb-8 mb-8">
+        <div class="products-cards w-full md:h-96 md:pb-8 mb-8" >
             <div
                 class="px-3 sm:px-6 py-4 sm:py-6 mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                 <h2 class="text-base sm:text-lg font-semibold text-gray-700">Productos Mas Vendidos</h2>
@@ -259,7 +287,7 @@
                     Top Favoritos <i class="fa-solid fa-arrow-right"></i>
                 </h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 px-3">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 px-3">
                 <div class="product-card w-full max-w-[240px] bg-white rounded-lg shadow-md p-3 pt-3 pb-4 flex flex-col items-center 
                 mx-auto group hover:shadow-lg hover:scale-105 transition-transform duration-300 shadow-gray-700/30 border border-gray-200/20">
                     <img src="./img/prod3.jpg" alt="Producto 1" class="w-full h-32 object-cover rounded-lg mb-3">
@@ -373,7 +401,7 @@
                         <span>Agregar al Carrito</span>
                     </button>
                 </div>
-            </div>
+                </div>
         </div>
 
         <!-- Sección de publicidad -->
@@ -385,7 +413,7 @@
             <div class="absolute w-full h-full md:h-96 flex flex-col p-4 md:flex-row items-center justify-between md:justify-around bg-black/30 
             md:bg-black/40 rounded-lg gap-4 md:gap-8 border border-gray-200/20 shadow-xl shadow-gray-900/50">
                 <div
-                    class="w-full md:w-96 h-auto px-6 py-6 md:py-2 gap-2 bg-white-500/30 border border-white-300/50 rounded-lg shadow-xl 
+                    class=" w-full md:w-96 h-auto px-6 py-6 md:py-2 gap-2 bg-white-500/30 border border-white-300/50 rounded-lg shadow-xl 
                     shadow-gray-900/50 md:m-4 flex flex-col justify-center mt-6 md:mt-0 bg-black/50 md:bg-white-500 md:bg-transparent/30">
                     <h4 class="text-sm md:text-xs text-rose-500 font-bold mb-2 md:mb-0">Atención a Negocios & Salones
                     </h4>
@@ -398,9 +426,9 @@
                             py-3 md:py-1.5 px-6 md:px-4 text-center text-sm font-bold">Explorar Colección</a>
                 </div>
                 <div class="hidden md:flex w-full md:w-3/5 lg:w-2/5 max-w-full h-auto gap-2 bg-black/30 rounded-lg shadow-xl shadow-gray-900/50  
-                md:justify-end m-4 border border-gray-200/20 hover:w-96 transition-all duration-300">
+                md:justify-end m-4 border border-gray-200/20 overflow-hidden  md:hover:scale-110 transition-transform duration-300">
                     <img src="./img/banner.jpg" alt="" class="bg-white w-full md:max-w-2/5 md:w-2/5 lg:w-full rounded-lg justify-between 
-                    items-center md:justify-end md:items-end">
+                    items-center md:justify-end md:items-end transition-transform duration-300 hover:scale-105 ">
                 </div>
 
             </div>
@@ -414,7 +442,7 @@
 
         <div class=" w-full p-4 flex flex-col md:flex-row gap-8">
             <div
-                class="relative w-full max-w-full h-auto pt-6 pb-2 flex items-start overflow-hidden bg-rose-100 rounded-3xl shadow-xl border">
+                class="relative  w-full max-w-full h-auto pt-6 pb-2 flex items-start overflow-hidden bg-rose-100 rounded-3xl shadow-xl border">
                 <div
                     class="translate-y-0 products-cards w-full max-w-full min-w-0 flex flex-col items-start gap-1 pb-4">
                     <div class="w-full max-w-full px-3 flex flex-wrap items-center justify-between gap-2 sm:gap-3 ml-0">
@@ -612,40 +640,25 @@
         </div>
     </footer>
 
-    <!-- Lógica del Menú Hamburguesa -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menuNav = document.getElementById('menu-nav');
+        const btn = document.getElementById("menuBtn")
+        const menu = document.getElementById("mobileMenu")
 
-        menuBtn.addEventListener('click', () => {
-            // Alterna las clases para mostrar u ocultar
-            menuNav.classList.toggle('hidden');
-            menuNav.classList.toggle('flex');
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden")
+        })
 
-            // Cambia el icono de hamburguesa a una 'X' y viceversa para mejor feedback visual
-            const icon = menuBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+
+        const closebtn = document.getElementById("closeMenuBtn")
+        closebtn.addEventListener("click", () => {
+            menu.classList.add("hidden")
+        })
+
+        document.addEventListener("click", (event) => {
+            if (!menu.contains(event.target) && !btn.contains(event.target)) {
+                menu.classList.add("hidden")
             }
-        });
-
-        document.addEventListener('click', (event) => {
-            const clicEnBoton = menuBtn.contains(event.target);
-            const clicEnMenu = menuNav.contains(event.target);
-            const menuEstaAbierto = !menuNav.classList.contains('hidden');
-
-            // Si el clic NO fue en el botón, NO fue en el menú, y el menú ESTÁ abierto:
-            if (!clicEnBoton && !clicEnMenu && menuEstaAbierto) {
-                menuNav.classList.add('hidden');
-                menuNav.classList.remove('flex');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
+        })
     </script>
 
 </body>
