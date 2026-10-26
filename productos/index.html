@@ -16,51 +16,34 @@
     <title>Document</title>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-rose-100/60 shadow-md">
-            <div class="w-full bg-[#190510] text-white text-[10px] py-2 md:py-1 px-4 md:px-6 flex flex-row sm:flex-row justify-between 
-            items-center gap-2 sm:gap-0">
-            <p class="font-light text-center sm:text-left">Distribuidora de Belleza París </p>
-            <div class="bg-[#fff]/10 rounded-full py-1 px-1 flex items-center gap-2 ">
-                <a href="./inicio/index.html" class="bg-[#E81A80] py-1 px-3 rounded-full text-white hover:underline">Iniciar Sesión</a>
-                <span>|</span>
-                <a href="./registro/index.html"
-                    class=" py-1 px-3 rounded-full text-white hover:underline">Registrarse</a>
-            </div>
-        </div>
+    <header class="w-full bg-white shadow-sm md:sticky top-0 z-50  md:z-50">
 
 
-        <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center gap-4">
-            <!-- Logo -->
-            <div class="flex items-center gap-3">
+        <!-- Barra de navegación -->
+        <div class="relative max-w-full m-auto bg-pink-800 px-4 md:px-6 py-3 md:py-1 border-b border-pink-500 flex 
+        flex-wrap md:flex-nowrap items-center justify-between gap-4 md:gap-6">
+
+            <div class="relative flex items-center gap-1 w-auto md:w-auto justify-start order-1 md:order-none">
+
                 <!-- Boton hamburguesa -->
                 <button id="menu-btn"
                     class="absolute left-0 md:hidden text-white text-2xl focus:outline-none px-2 transition-transform">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                
-                <img src="./img/newlg.png" alt="Logo" class="h-10 w-auto">
-                
+
+                <img src="./img/logo.png" alt="Distribuidora París" class="h-10 w-auto md:h-12 translate-x-2/3">
             </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
-                <a href="../index.html" class="text-rose-600 hover:text-rose-600 transition">Inicio</a>
-                <a href="#categorias" class="hover:text-rose-600 transition">Categorías</a>
-                <a href="./productos/index.html" class="hover:text-rose-600 transition">Catálogo</a>
-                <a href="#ofertas" class="hover:text-rose-600 transition">Ofertas</a>
-                <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
-            </nav>
-
-            <!-- Mobile Menu -->
-            <div id="menu-nav" class="md:hidden hidden absolute top-full left-0 z-100 w-full bg-pink-800 shadow-lg pb-4 md:static md:w-auto 
+            <!-- Contenedor menu -->
+            <div id="menu-nav" class="hidden absolute top-full left-0 z-100 w-full bg-pink-800 shadow-lg pb-4 md:static md:w-auto 
             md:bg-transparent md:shadow-none md:pb-0 md:flex flex-col md:flex-row items-center translate-x-0 xl:translate-x-[170px] 
             py-2 gap-2 flex-1 max-w-full xl:max-w-lg justify-center md:justify-start">
                 <nav class="flex items-around w-full md:w-max">
                     <ul
-                        class="flex flex-col md:flex-row flex items-center w-full gap-4 md:gap-6 text-sm font-medium text-white">
-                        <li class="w-full md:w-auto text-center"><a href="#"
+                        class="flex flex-col md:flex-row flex items-center justify-center w-full gap-4 md:gap-6 text-sm font-medium text-white">
+                        <li class="w-full md:w-auto text-center"><a href="../index.html"
                                 class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Inicio</a></li>
-                        <li class="w-full md:w-auto text-center"><a href="./productos/index.html"
+                        <li class="w-full md:w-auto text-center"><a href="#"
                                 class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Productos</a></li>
                         <li class="w-full md:w-auto text-center"><a href="#"
                                 class="block py-1 md:py-0 hover:text-rose-600 hover:underline">Destacados</a></li>
@@ -70,17 +53,22 @@
                 </nav>
             </div>
 
+            <div
+                class="flex justify-center md:justify-end w-full md:w-auto max-w-full md:max-w-lg relative px-0 translate-x-0 xl:translate-x-[12px] order-3 md:order-none">
+                <input type="text" placeholder="Buscar productos" class="w-full pl-5 pr-9 py-2 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none 
+                        focus:border-rose-500 focus:bg-white transition">
+                <button
+                    class="absolute inset-y-0 right-0 pr-3.5 px-4 md:px-3 flex items-center text-black hover:text-rose-600">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
             <!-- Carrito y Perfil -->
-            <div class="flex items-center justify-center w-auto md:w-auto gap-4 md:gap-5 text-gray-600 order-2 md:order-none">
-                <!-- Barra de búsqueda -->
-                <div class="relative hidden lg:block w-60 translate-x-0 xl:translate-x-[12px]">
-                    <input type="text" placeholder="Buscar maquillaje, skincare..." class="w-full bg-slate-100 text-xs rounded-full 
-                    pl-9 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
-                </div>
+            <div
+                class="flex items-center justify-center w-auto md:w-auto gap-4 md:gap-5 text-gray-600 order-2 md:order-none">
 
                 <a href="#"
-                    class="bg-gray-100 relative p-1 rounded-full translate-x-0  hover:text-rose-600">
+                    class="bg-gray-100 relative p-1 rounded-full translate-x-0 md:translate-x-[-40px] hover:text-rose-600">
                     <i class="fa-solid fa-cart-shopping text-lg text-black"></i>
 
                     <div class="bg-gray-100 absolute -top-1.5 -right-1.5 
@@ -92,14 +80,14 @@
                 </a>
 
                 <a href="#" class="bg-gray-100 py-2 px-1.5 rounded-full flex items-center gap-1 
-                    hover:bg-rose-500 text-sm translate-x-0 text-black transition">
+                    hover:bg-rose-500 text-sm translate-x-0 md:translate-x-[-45px] text-black transition">
                     <i class="fa-regular fa-user text-lg text-black hover:text-white transition"></i>
                 </a>
             </div>
-
         </div>
-         <!-- Barra de Categorías -->
-        <nav class="bg-white/90 backdrop-blur-md border-t border-gray-100">
+
+        <!-- Barra de Categorías -->
+        <nav class="border-t border-gray-100 bg-white">
             <div
                 class="max-w-7xl mx-auto px-4 md:px-6 flex items-center gap-4 md:gap-8 text-xs font-medium text-gray-700 py-2.5 overflow-x-auto snap-x">
 
