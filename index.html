@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/d6021a6356.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
@@ -18,10 +19,11 @@
 
 </head>
 
-<body class="bg-slate-50 flex flex-col items-center justify-center gap-0">
+
+<body id="inicio" class="bg-slate-50 flex flex-col items-center justify-center gap-0">
 
     <!-- header -->
-    <header class="w-full bg-pink-800 backdrop-blur-md sticky top-0 z-30 border-b border-rose-100/60 shadow-sm">
+    <header class="w-full relative bg-pink-800 backdrop-blur-md sticky top-0 z-30 border-b border-rose-100/60 shadow-sm">
         <div class="w-full bg-[#190510] text-white text-[10px] py-2 md:py-1 px-4 md:px-[80px] flex flex-row sm:flex-row justify-between 
             items-center gap-2 sm:gap-0">
             <p class="font-light text-center sm:text-left">Distribuidora de Belleza París </p>
@@ -95,7 +97,7 @@
         </div>
 
         <div id="mobileMenu"
-            class="hidden md:hidden bg-white border-t z-50 border-rose-100 px-4 pt-3 pb-5 space-y-3 shadow-xl">
+            class="hidden md:hidden absolute top-0 left-0 w-full h-[calc(100vh-[200px])] bg-white border-t z-40 border-rose-100 px-4 pt-3 pb-5 space-y-3 shadow-xl">
             <div class="flex items-center justify-between pb-2 border-b border-slate-100">
                 <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">Menú de Navegación</span>
 
@@ -250,7 +252,7 @@
         </div>
 
         <!-- Explorar por Categorías -->
-        <div class="featured-products w-full md:mr-0 md:w-auto md:mr-6 md:mb-[0px] md:ms-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:bg-rose-100 lg:grid-cols-4 gap-4 px-12 md:px-7 
+        <div id="categorias" class="featured-products w-full md:mr-0 md:w-auto md:mr-6 md:mb-[0px] md:ms-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:bg-rose-100 lg:grid-cols-4 gap-4 px-12 md:px-7 
             py-8 rounded-lg shadow-md border border-rose-200 top-0 md:-translate-y-12">
             <h2
                 class="col-span-full text-lg px-4 pt-6 md:pt-0 pb-2 md:pb-0 font-semibold text-gray-700 text-center md:text-left">
@@ -335,7 +337,7 @@
                     mx-auto hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                     <img src="./img/prod4.jpg" alt="Producto 4" class="w-full h-32 object-cover rounded-lg mb-3">
                     <h3 class="text-gray-700 font-semibold text-sm mb-2 text-left w-full">Labial Matte Larga duracion
-                        Rojo intenso</h3>
+                        Rojo</h3>
                     <p class="max-h-0 overflow-hidden opacity-0 text-gray-500 text-xs mb-0 text-left w-full transition-all duration-500 
                     ease-in-out group-hover:max-h-10 group-hover:mb-3 group-hover:opacity-100">Descripción del
                         producto...</p>
@@ -381,7 +383,7 @@
                     mx-auto hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                     <img src="./img/prod4.jpg" alt="Producto 4" class="w-full h-32 object-cover rounded-lg mb-3">
                     <h3 class="text-gray-700 font-semibold text-sm mb-2 text-left w-full">Labial Matte Larga duracion
-                        Rojo intenso</h3>
+                        Rojo</h3>
                     <p class="max-h-0 overflow-hidden opacity-0 text-gray-500 text-xs mb-0 text-left w-full transition-all duration-500
                     ease-in-out group-hover:max-h-10 group-hover:mb-3 group-hover:opacity-100">Descripción del
                         producto...</p>
@@ -404,7 +406,7 @@
                     mx-auto hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                     <img src="./img/prod4.jpg" alt="Producto 4" class="w-full h-32 object-cover rounded-lg mb-3">
                     <h3 class="text-gray-700 font-semibold text-sm mb-2 text-left w-full">Labial Matte Larga duracion
-                        Rojo intenso</h3>
+                        Rojo</h3>
                     <p class="max-h-0 overflow-hidden opacity-0 text-gray-500 text-xs mb-0 text-left w-full transition-all duration-500 
                     ease-in-out group-hover:max-h-10 group-hover:mb-3 group-hover:opacity-100">Descripción del
                         producto...</p>
@@ -479,7 +481,7 @@
         </div>
 
         <!-- productos en promocion -->
-        <section class="w-full bg-rose-100/70 p-6 sm:p-8 rounded-3xl md:m-2 shadow-sm border border-rose-200">
+        <section id="ofertas" class="w-full bg-rose-100/70 p-6 sm:p-8 rounded-3xl md:m-2 shadow-sm border border-rose-200">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                 <h2 class="text-xl font-bold text-slate-800">Productos En Promoción</h2>
                 <div class="flex flex-wrap items-center gap-2">
@@ -690,7 +692,7 @@
             </ul>
         </div>
 
-        <div>
+        <div id="contacto" class="hidden md:block">
             <h4 class="text-white mb-2 text-sm">Contacto</h4>
             <ul class="text-white text-[0.625rem]">
                 <li><a href="#" class="hover:text-rose-600 hover:underline">Dirección: Calle #6-23, Garzón, Huila</a>
